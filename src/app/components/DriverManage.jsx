@@ -12,8 +12,6 @@ import { Pagination } from "@nextui-org/react";
 
 const DriverManage = () => {
 
-    const [currentPage, setCurrentPage] = useState(1);
-    const [rowsPerPage] = useState(5);
 
     const data = [
         {
@@ -47,6 +45,9 @@ const DriverManage = () => {
             tel: '0632417522'
         },
     ]
+
+    const [currentPage, setCurrentPage] = useState(1);
+    const [rowsPerPage] = useState(5);
     const startIndex = (currentPage - 1) * rowsPerPage;
     const endIndex = startIndex + rowsPerPage;
     const currentData = data.slice(startIndex, endIndex);

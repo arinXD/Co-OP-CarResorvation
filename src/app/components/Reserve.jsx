@@ -131,7 +131,7 @@ const Reserve = () => {
                         required
                     />
                 </div>
-                <div className='grid grid-cols-3 max-sm:grid-cols-1 max-md:grid-cols-3 max-xl:grid-cols-2 justify-items-stretch items-center my-4 xl:ml-2 col-span-2'>
+                <div className='grid grid-cols-2 max-sm:grid-cols-1 max-md:grid-cols-3 max-xl:grid-cols-2 justify-items-stretch items-center my-4 xl:ml-2 col-span-2'>
                     <div className="relative">
                         <p className='pb-3'>วันเดินทาง</p>
                         {/* <div className="absolute inset-y-0 start-0 flex items-center ps-5 pointer-events-none mt-9">
@@ -144,17 +144,6 @@ const Reserve = () => {
                             id=""
                             className="bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-l-lg placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500 block w-full ps-5 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             placeholder=""
-                            required
-                        />
-                    </div>
-                    <div className="relative max-lg:col-span-3 max-lg:mb-5 max-xl:ml-1 max-xl:mt-4 md:mt-0 sm:mt-0">
-                        <p className='pb-3'>วันเดินทาง {selectedDate || token.reserveDate} เวลารับ</p>
-                        <input
-                            value={selectedTime}
-                            onChange={(e) => setSelectedTime(e.target.value)}
-                            type="time"
-                            id=""
-                            className="bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500  w-full ps-5 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             required
                         />
                     </div>
@@ -230,7 +219,7 @@ const Reserve = () => {
 
                     </div>
                 </div>
-                <div className='grid grid-cols-3 max-sm:grid-cols-1 max-md:grid-cols-2 max-xl:grid-cols-2 justify-items-stretch items-center col-span-3'>
+                <div className='grid grid-cols-4 max-sm:grid-cols-1 max-md:grid-cols-2 max-xl:grid-cols-2 justify-items-stretch items-center col-span-3'>
                     <div className="relative max-lg:col-span-3 max-lg:mb-5 max-xl:mr-1">
                         <p className='pb-3'>จำนวนผู้โดยสาร</p>
                         <div className="absolute inset-y-0 start-0 flex items-center ps-5 pointer-events-none mt-9 ">
@@ -277,6 +266,17 @@ const Reserve = () => {
                             placeholder="หมายเลขโทรศัพท์มือถือ"
                             required
 
+                        />
+                    </div>
+                    <div className="relative max-lg:col-span-3 max-lg:mb-5 max-xl:ml-1 max-xl:mt-4 md:mt-0 sm:mt-0">
+                        <p className='pb-3'>วันเดินทาง {selectedDate || token.reserveDate} เวลารับ</p>
+                        <input
+                            value={selectedTime}
+                            onChange={(e) => setSelectedTime(e.target.value)}
+                            type="time"
+                            id=""
+                            className="bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500  w-full ps-5 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            required
                         />
                     </div>
                 </div>
